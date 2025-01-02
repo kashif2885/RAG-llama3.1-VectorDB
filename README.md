@@ -33,17 +33,18 @@ source venv/bin/activate   # On Windows, use `venv\Scripts\activate
 3. **Install dependencies**:
 ```bash
 pip install -r requirements.txt
-Configure environment variables:
+
 ```
 
-4. Create a .env file in the root directory.
+4. **Configure environment variables**:
+Create a .env file in the root directory.
 Add your Groq API Key:
 .env file
 ```bash
 GROQ_API_KEY=your_groq_api_key
 ```
 
-Run the application:
+***Run the application***:
 
 ```bash
 uvicorn main:app --host 127.0.0.1 --port 11000
@@ -53,7 +54,9 @@ API Endpoints
 Endpoint: /upload-documents
 Method: POST
 Description: Upload a PDF document to generate embeddings and store in the vector database.
+
 Request: Form-data with a file field.
+
 Response:
 json
 ```bash
@@ -65,6 +68,7 @@ json
 Endpoint: /ask_question
 Method: POST
 Description: Submit a query to retrieve relevant context from the document and generate a response.
+
 Request:
 json
 ```bash
